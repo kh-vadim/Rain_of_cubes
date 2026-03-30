@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 45124569}
   m_Layer: 0
   m_Name: Ledge_04
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 183325474}
   m_Layer: 0
   m_Name: WallFront
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 186720291}
   m_Layer: 0
   m_Name: Ledge_02
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 215911851}
   m_Layer: 0
   m_Name: Ledge_01
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,6 +494,53 @@ Transform:
   m_Father: {fileID: 1271163315}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40}
+--- !u!1 &217094421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217094423}
+  - component: {fileID: 217094422}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &217094422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217094421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70694370c5d83d6479de755b0eba1a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cubePrefab: {fileID: 7393428883310680344, guid: 1844ede594ca3e2468e2d698133cfd44, type: 3}
+  _minPosition: {fileID: 1844117570}
+  _maxPosition: {fileID: 2038031306}
+--- !u!4 &217094423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217094421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.275894, y: 121.5, z: 1.9179235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &412548639
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +553,7 @@ GameObject:
   - component: {fileID: 412548641}
   m_Layer: 0
   m_Name: WallRight
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,7 +700,7 @@ GameObject:
   - component: {fileID: 825034656}
   m_Layer: 0
   m_Name: WallBack
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,14 +825,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.28558573, y: -0.400288, z: 0.11236777, w: 0.863472}
-  m_LocalPosition: {x: 89.7, y: 118.8, z: -56.7}
+  m_LocalRotation: {x: 0.40259907, y: -0.3463622, z: 0.13136104, w: 0.8370732}
+  m_LocalPosition: {x: 69.6, y: 147.4, z: -65.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35.672, y: -50.528, z: -2.44}
+  m_LocalEulerAnglesHint: {x: 49.908, y: -47.403, z: -5.254}
 --- !u!1 &1271163311
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,10 +845,9 @@ GameObject:
   - component: {fileID: 1271163314}
   - component: {fileID: 1271163313}
   - component: {fileID: 1271163312}
-  - component: {fileID: 1271163316}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -901,21 +947,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1271163316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271163311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70694370c5d83d6479de755b0eba1a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cube: {fileID: 3756287549134432272, guid: 1844ede594ca3e2468e2d698133cfd44, type: 3}
-  _minPosition: {fileID: 1844117570}
-  _maxPosition: {fileID: 2038031306}
 --- !u!1 &1424144953
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +961,7 @@ GameObject:
   - component: {fileID: 1424144954}
   m_Layer: 0
   m_Name: Ledge_03
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1034,7 +1065,7 @@ GameObject:
   - component: {fileID: 1653394117}
   m_Layer: 0
   m_Name: WallLeft
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
