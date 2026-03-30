@@ -11,34 +11,31 @@ public class CubesCreator : MonoBehaviour
     private int _poolMaxSize = 20;
 
     private ObjectPool<Cube> _pool;
-
-    private Color _defaultColor;
-
-    private float _repeatRate = 1f;
     
     private void Awake()
     {
-        _defaultColor = _cubePrefab.GetComponent<Renderer>().sharedMaterial.color;
-
         _pool = new ObjectPool<Cube>(
             createFunc: () => Instantiate(_cubePrefab),
-            actionOnGet: (cube) => ActionOnGet(cube),
+            actionOnGet: (cube) =>
+            {
+                ActionOnGet(cube);
+                cube.OnLifeTimeEnded += ReturnCubeToPool;
+            },
 
-            actionOnRelease: (cube) => cube.gameObject.SetActive(false),
+            actionOnRelease: (cube) =>
+            {
+                cube.gameObject.SetActive(false);
+                cube.OnLifeTimeEnded -= ReturnCubeToPool;
+            },
             actionOnDestroy: (cube) => Destroy(cube.gameObject),
             collectionCheck: false,
             defaultCapacity: _poolCapacity,
             maxSize: _poolMaxSize);
     }
 
-    private void Start()
+    public void SpawnCube()
     {
-        InvokeRepeating(nameof(GetCube), 0.0f, _repeatRate);
-    }
-
-    private void GetCube()
-    {
-        if (_pool.CountActive < _poolMaxSize)
+        if (_pool.CountAll < _poolMaxSize || _pool.CountInactive > 0)
             _pool.Get();
     }
 
@@ -50,8 +47,13 @@ public class CubesCreator : MonoBehaviour
             Random.Range(_minPosition.position.z, _maxPosition.position.z)
         );
 
-        cube.Init(_pool, randomPosition, _defaultColor);
+        cube.Init(randomPosition);
 
         cube.gameObject.SetActive(true);
+    }
+
+    private void ReturnCubeToPool(Cube returnedCube)
+    {
+        _pool.Release(returnedCube);
     }
 }

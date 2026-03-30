@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.Pool;
 using System.Collections;
+using System;
 
 public class Cube : MonoBehaviour
 {
@@ -8,20 +8,19 @@ public class Cube : MonoBehaviour
     [SerializeField] private float _maxLifeTime = 5f;
 
     private Rigidbody _rigidbody;
-    private Renderer _renderer;
     private bool _hasTouch = false;
+    private CubeColorChanger _colorChanger;
 
-    private ObjectPool<Cube> _pool;
+    public event Action<Cube> OnLifeTimeEnded;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _renderer = GetComponent<Renderer>();
+        _colorChanger = GetComponent<CubeColorChanger>();
     }
 
-    public void Init(ObjectPool<Cube> pool, Vector3 spawnPosition, Color defaultColor)
+    public void Init(Vector3 spawnPosition)
     {
-        _pool = pool;
         _hasTouch = false;
 
         transform.position = spawnPosition;
@@ -29,7 +28,7 @@ public class Cube : MonoBehaviour
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
 
-        _renderer.material.color = defaultColor;
+        _colorChanger.ResetToDefaultColor();
     }
     
     private void OnCollisionEnter(Collision collision)
@@ -38,9 +37,9 @@ public class Cube : MonoBehaviour
         {
             _hasTouch = true;
 
-            _renderer.material.color = Random.ColorHSV();
-            
-            float lifeTime = Random.Range(_minLifeTime, _maxLifeTime);
+            _colorChanger.SetRandomColor();
+
+            float lifeTime = UnityEngine.Random.Range(_minLifeTime, _maxLifeTime);
 
             StartCoroutine(LifeTimerCoroutine(lifeTime));
         }
@@ -49,8 +48,6 @@ public class Cube : MonoBehaviour
     private IEnumerator LifeTimerCoroutine(float lifeTime)
     {
         yield return new WaitForSeconds(lifeTime);
-
-        if (_pool != null)
-            _pool.Release(this);
+        OnLifeTimeEnded?.Invoke(this);
     }
 }
