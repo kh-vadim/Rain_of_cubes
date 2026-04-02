@@ -11,7 +11,7 @@ public class Cube : MonoBehaviour
     private bool _hasTouch = false;
     private CubeColorChanger _colorChanger;
 
-    public event Action<Cube> OnLifeTimeEnded;
+    public event Action<Cube> LifeTimeEnded;
 
     private void Awake()
     {
@@ -33,14 +33,11 @@ public class Cube : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (_hasTouch == false && collision.gameObject.CompareTag("Platform"))
+        if (_hasTouch == false && collision.gameObject.TryGetComponent(out Platform _))
         {
             _hasTouch = true;
-
             _colorChanger.SetRandomColor();
-
             float lifeTime = UnityEngine.Random.Range(_minLifeTime, _maxLifeTime);
-
             StartCoroutine(LifeTimerCoroutine(lifeTime));
         }
     }
@@ -48,6 +45,6 @@ public class Cube : MonoBehaviour
     private IEnumerator LifeTimerCoroutine(float lifeTime)
     {
         yield return new WaitForSeconds(lifeTime);
-        OnLifeTimeEnded?.Invoke(this);
+        LifeTimeEnded?.Invoke(this);
     }
 }

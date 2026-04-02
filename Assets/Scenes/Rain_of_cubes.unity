@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 45124571}
   - component: {fileID: 45124570}
   - component: {fileID: 45124569}
+  - component: {fileID: 45124573}
   m_Layer: 0
   m_Name: Ledge_04
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,6 +230,18 @@ Transform:
   m_Father: {fileID: 1271163315}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
+--- !u!114 &45124573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45124568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9aa3cce9ed20e4895747f666f7014b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &183325472
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +254,7 @@ GameObject:
   - component: {fileID: 183325474}
   m_Layer: 0
   m_Name: WallFront
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,9 +307,10 @@ GameObject:
   - component: {fileID: 186720293}
   - component: {fileID: 186720292}
   - component: {fileID: 186720291}
+  - component: {fileID: 186720295}
   m_Layer: 0
   m_Name: Ledge_02
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,6 +402,18 @@ Transform:
   m_Father: {fileID: 1271163315}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40}
+--- !u!114 &186720295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186720290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9aa3cce9ed20e4895747f666f7014b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &215911850
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,9 +426,10 @@ GameObject:
   - component: {fileID: 215911853}
   - component: {fileID: 215911852}
   - component: {fileID: 215911851}
+  - component: {fileID: 215911855}
   m_Layer: 0
   m_Name: Ledge_01
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,6 +521,18 @@ Transform:
   m_Father: {fileID: 1271163315}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40}
+--- !u!114 &215911855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215911850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9aa3cce9ed20e4895747f666f7014b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &217094421
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +607,7 @@ GameObject:
   - component: {fileID: 412548641}
   m_Layer: 0
   m_Name: WallRight
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -715,7 +754,7 @@ GameObject:
   - component: {fileID: 825034656}
   m_Layer: 0
   m_Name: WallBack
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,9 +899,10 @@ GameObject:
   - component: {fileID: 1271163314}
   - component: {fileID: 1271163313}
   - component: {fileID: 1271163312}
+  - component: {fileID: 1271163316}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -962,6 +1002,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271163316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271163311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9aa3cce9ed20e4895747f666f7014b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1424144953
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,9 +1026,10 @@ GameObject:
   - component: {fileID: 1424144956}
   - component: {fileID: 1424144955}
   - component: {fileID: 1424144954}
+  - component: {fileID: 1424144958}
   m_Layer: 0
   m_Name: Ledge_03
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,6 +1121,18 @@ Transform:
   m_Father: {fileID: 1271163315}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -40, y: 0, z: 0}
+--- !u!114 &1424144958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424144953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9aa3cce9ed20e4895747f666f7014b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1653394115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1145,7 @@ GameObject:
   - component: {fileID: 1653394117}
   m_Layer: 0
   m_Name: WallLeft
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
