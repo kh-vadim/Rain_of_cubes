@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Rain_of_cubes.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
